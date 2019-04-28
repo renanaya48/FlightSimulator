@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlightSimulator.Views"
-             xmlns:Views="clr-namespace:FlightSimulator.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -41,14 +40,14 @@
                                 UpdateSourceTrigger=PropertyChanged, Path=Value, StringFormat={}{0:0.00}}" HorizontalAlignment="Right" Margin="0,-14,0,335"/>
             </StackPanel>
             <!-- Joystick -->
-            <local:Joystick x:Name="Joystick" Margin="10" Grid.Column="2" Grid.Row="1" Aileron="{Binding ElementName=AileronValue,Path=Text, Mode=OneWayToSource}"
+
+            <local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" Margin="10"  Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
                             Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"/>
+
+
             <!-- Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
                         Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
         </DockPanel>
+            
     </Grid>
 </UserControl>
-
-
-
-
