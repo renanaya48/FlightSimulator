@@ -36,7 +36,7 @@ namespace FlightSimulator.Model
             set
             {
                 this.lat = value;
-                NotifyPropertyChanged("Lat");
+                //NotifyPropertyChanged("Lat");
 
             }
         }
@@ -73,8 +73,8 @@ namespace FlightSimulator.Model
                 while (!this.info.ShouldStop)
                 {
                     string[] args = this.info.GetInput();
-                    lat = Convert.ToDouble(args[0]);
-                    lon = Convert.ToDouble(args[1]);
+                    Lat = Convert.ToDouble(args[0]);
+                    Lon = Convert.ToDouble(args[1]);
                 }
             }).Start();
         }

@@ -7,13 +7,22 @@
              xmlns:Views="clr-namespace:FlightSimulator.Views"
              mc:Ignorable="d" Height="425" Width="480">
     <Grid>
-        <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="True" Margin="0,0,0,-29.667">
             <!--AILERON-->
             <TextBlock DockPanel.Dock="Top" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="⟵ aileron ⟶ "/><InlineUIContainer>
-                    <TextBlock x:Name="AileronValue" Text ="{Binding Aileron, StringFormat={}{0:0.00}, UpdateSourceTrigger=PropertyChanged ,Mode=OneWayToSource}" HorizontalAlignment="Right"/>
-        </InlineUIContainer></TextBlock>
+                    <TextBlock x:Name="AileronValue" Text ="{Binding Aileron, Mode=OneWayToSource, StringFormat={}{0:0.00}, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Width="89" RenderTransformOrigin="0.506,0.5" Height="25"/>
+                </InlineUIContainer></TextBlock>
             <!--ELEVATOR-->
-            <TextBlock DockPanel.Dock ="Top" x:Name="ElevatorValue" HorizontalAlignment="Right" Text ="{Binding Elevator, UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource, StringFormat=0.0#}"/>
+            <TextBlock DockPanel.Dock ="Top" x:Name="ElevatorValue" HorizontalAlignment="Right" Text ="{Binding Elevator, UpdateSourceTrigger=PropertyChanged , Mode=OneWayToSource, StringFormat={}{0:0.00}}" RenderTransformOrigin="0.5,0.5" Width="70" Height="30" Margin="0,0,30,0">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
             <TextBlock Text=" &#x27f5; elevator &#x27f6;" DockPanel.Dock="Right" Margin="0" FontSize="15" VerticalAlignment="Center">
                 <TextBlock.LayoutTransform>
                     <RotateTransform Angle="90" />
@@ -41,11 +50,11 @@
             </StackPanel>
             <!-- Joystick -->
 
-            <!--local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" Margin="10"  Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
-                            Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
+            <local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" Margin="10"  Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
+                        Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"/>
 
 
-            <local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Aileron="{Binding Ailron, Mode=OneWayToSource}" Elevator="{Binding Elevetor, Mode=OneWayToSource}"/>
+            <!--local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Aileron="{Binding Ailron, Mode=OneWayToSource}" Elevator="{Binding Elevetor, Mode=OneWayToSource}"-->
             <!--="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
         </DockPanel>
     </Grid>

@@ -48,19 +48,19 @@ namespace FlightSimulator.Model
 
         public void SendCommand(string command)
         {
-            if (!Commands.Instance.IsConnect)
+           /* if (!Commands.Instance.IsConnect)
             {
                 this.command.ServerConnect("127.0.0.1", 5400);
-            }
-            Commands.Instance.SendCommands(command);
+            }*/
+            //Commands.Instance.SendCommands(command);
 
-            /* if (Commands.Instance.IsConnect)           
+             if (Commands.Instance.IsConnect)           
              {
                  new Thread(delegate ()
                  {
                      Commands.Instance.SendCommands(command);
                  }).Start();
-             }*/
+             }
         }
     }
 }
