@@ -112,8 +112,8 @@ namespace FlightSimulator
             if (!IsConnect)
             {
                 IsConnect = true;
-                reader = new StreamReader(client.GetStream());
                 client = listener.AcceptTcpClient();
+                reader = new StreamReader(client.GetStream());
             }
 
             commandInput = reader.ReadLine();

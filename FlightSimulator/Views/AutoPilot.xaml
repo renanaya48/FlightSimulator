@@ -9,10 +9,10 @@
     <Grid Margin="0,365,662,0" Height="40" VerticalAlignment="Top">
         <Canvas Margin="-16,-323,-500,25" RenderTransformOrigin="0.517,0.259">
             <StackPanel Height="424" Canvas.Left="45" Width="301" Canvas.Top="-34">
-                <TextBox x:Name="Commands" Height="187" AcceptsReturn="True" Text="{Binding Data, UpdateSourceTrigger=PropertyChanged}" Background="{Binding Color, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,5.333,0"/>
-                <WrapPanel HorizontalAlignment="Center">
-                    <Button Content="OK" Command="{Binding OkCommand}" Margin="10" Width="94"/>
-                    <Button Content="Clear" Command="{Binding ClearCommand}" Margin="10" Height="41" Width="102" />
+                <TextBox x:Name="Commands" Height="277" AcceptsReturn="True" Text="{Binding Data, UpdateSourceTrigger=PropertyChanged}" Background="{Binding Color, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,-144.667,0"/>
+                <WrapPanel HorizontalAlignment="Center" Margin="33,0,-54.667,0" Width="323">
+                    <Button Content="OK" Command="{Binding OkCommand}" Margin="10" Width="132"/>
+                    <Button Content="Clear" Command="{Binding ClearCommand}" Margin="10" Height="41" Width="148" />
                 </WrapPanel>
             </StackPanel>
         </Canvas>
