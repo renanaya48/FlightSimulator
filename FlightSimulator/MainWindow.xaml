@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlightSimulator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="900">
     <Grid>
-        
+        <Label Content="&#xD;&#xA;&#xD;&#xA;FlightSimulator" FontStyle="Italic" FontSize="30" HorizontalAlignment="Center" Foreground="Blue"/>
+        <Grid Name="In"
+
     </Grid>
 </Window>
