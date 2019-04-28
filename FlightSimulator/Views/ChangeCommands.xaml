@@ -16,5 +16,14 @@
             </TabItem>
         </TabControl>
 
+        <TabControl Grid.Column="3" HorizontalAlignment="Left" Height="320" Margin="4.333,76,0,0" VerticalAlignment="Top" Width="410">
+            <TabItem Header="Manual">
+                <!--local:Manual x:Name="Manual" Grid.Column="2" Grid.Row="1" Margin="10,10,-4,10"-->
+            </TabItem>
+            <TabItem Header="Auto Pilot">
+                <!--local:AutoPilot x:Name="AutoPilot" Grid.Column="2" Grid.Row="1" Margin="10,10,-52,-133"-->
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </UserControl>

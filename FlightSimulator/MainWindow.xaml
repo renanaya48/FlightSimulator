@@ -23,17 +23,15 @@
             <Viewbox Grid.Column="0" Grid.ColumnSpan="2">
                 <local:FlightBoard Grid.Column="0" Width="605"/>
             </Viewbox>
+
             <TabControl Grid.Column="3" HorizontalAlignment="Left" Height="320" Margin="4.333,76,0,0" VerticalAlignment="Top" Width="410">
                 <TabItem Header="Manual">
-                    <!--local:Manual x:Name="Manual" Grid.Column="2" Grid.Row="1" Margin="10,10,-4,10"-->
+                    <local:Manual x:Name="Manual" Grid.Column="2" Grid.Row="1" Margin="10,10,-4,10"/>
                 </TabItem>
                 <TabItem Header="Auto Pilot">
                     <local:AutoPilot x:Name="AutoPilot" Grid.Column="2" Grid.Row="1" Margin="10,10,-52,-133"/>
                 </TabItem>
             </TabControl>
-            <Viewbox Grid.Column="0" Grid.ColumnSpan="2">
-                <Views:Manual Grid.Column="1" Grid.Row="2" Margin="10,10,-4,10"/>
-            </Viewbox>
             <!--Viewbox Grid.Column="2" Grid.ColumnSpan="2">
                 <local:ChangeCommands x:Name="ChangeCommand" Grid.Column="1" Loaded="FlightBoard_Loaded" Height="576" Width="610"/>
             <-->

@@ -41,12 +41,12 @@
             </StackPanel>
             <!-- Joystick -->
 
-            <local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" Margin="10"  Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
-                            Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"/>
+            <!--local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" Margin="10"  Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
+                            Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
 
 
-            <!-- Aileron="{Binding ElementName=AileronValue, Path=Text, Mode=OneWayToSource}"
-                        Elevator="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
+            <local:Joystick x:Name="Joystick" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" Aileron="{Binding Ailron, Mode=OneWayToSource}" Elevator="{Binding Elevetor, Mode=OneWayToSource}"/>
+            <!--="{Binding ElementName=ElevatorValue, Path=Text, Mode=OneWayToSource}"-->
         </DockPanel>
     </Grid>
 </UserControl>
