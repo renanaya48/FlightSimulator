@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FlightSimulator.Model
 {
-    class ApplicationSettingsModel: ISettingsModel
+    public class ApplicationSettingsModel: ISettingsModel
     {
         #region Singleton
         private static ISettingsModel m_Instance = null;

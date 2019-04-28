@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace FlightSimulator.ViewModels.Windows
 {
-    class SettingsWindowViewModel: BaseNotify
+    public class SettingsWindowViewModel: BaseNotify
     {
         private Window window;
         private ISettingsModel model;
