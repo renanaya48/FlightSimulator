@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlightSimulator.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="500">
     <Grid Margin="0,365,662,0" Height="40" VerticalAlignment="Top">
-        <Canvas Margin="-16,-323,-639,-59" RenderTransformOrigin="0.517,0.259">
-            <StackPanel Height="424" Canvas.Left="45" Width="724" Canvas.Top="-34">
-                <TextBox x:Name="Commands" Height="289" AcceptsReturn="True" Text="{Binding Data, UpdateSourceTrigger=PropertyChanged}" Background="{Binding Color, UpdateSourceTrigger=PropertyChanged}"/>
+        <Canvas Margin="-16,-323,-500,-59" RenderTransformOrigin="0.517,0.259">
+            <StackPanel Height="424" Canvas.Left="45" Width="476" Canvas.Top="-34">
+                <TextBox x:Name="Commands" Height="289" AcceptsReturn="True" Text="{Binding Data, UpdateSourceTrigger=PropertyChanged}" Background="{Binding Color, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,40,0"/>
                 <WrapPanel HorizontalAlignment="Center">
-                    <Button Content="OK" Command="{Binding OkCommand}" Margin="10" Width="262"/>
-                    <Button Content="Clear" Command="{Binding ClearCommand}" Margin="10" Height="41" Width="251" />
+                    <Button Content="OK" Command="{Binding OkCommand}" Margin="10" Width="178"/>
+                    <Button Content="Clear" Command="{Binding ClearCommand}" Margin="10" Height="41" Width="185" />
                 </WrapPanel>
             </StackPanel>
         </Canvas>

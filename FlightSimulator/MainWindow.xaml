@@ -4,10 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlightSimulator.Views"
+        xmlns:Views="clr-namespace:FlightSimulator.Views"
+
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="900">
     <Grid>
-        <Label Content="&#xD;&#xA;&#xD;&#xA;FlightSimulator" FontStyle="Italic" FontSize="30" HorizontalAlignment="Center" Foreground="Blue"/>
+        <Label Content="&#xD;&#xA;&#xD;&#xA;Flight Simulator" FontStyle="Oblique" FontSize="30" HorizontalAlignment="Center" Foreground="Blue" FontWeight="Bold" Margin="300,-75,344.333,505.667" Width="249"/>
         <Grid Name="AllTogether" Margin="0,44,0,23">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -19,11 +21,12 @@
                 <ColumnDefinition Width="211*"/>
             </Grid.ColumnDefinitions>
             <Viewbox Grid.Column="0" Grid.ColumnSpan="2">
-                <local:FlightBoard Grid.Column="0"/>
+                <local:FlightBoard Grid.Column="0" Width="605"/>
             </Viewbox>
             <Viewbox Grid.Column="2" Grid.ColumnSpan="2">
-                <local:Joystick Grid.Column="1" Loaded="FlightBoard_Loaded"/>
+                <local:ChangeCommands x:Name="Manual" Grid.Column="1" Loaded="FlightBoard_Loaded" Height="576" Width="610"/>
             </Viewbox>
+
         </Grid>
 
     </Grid>
